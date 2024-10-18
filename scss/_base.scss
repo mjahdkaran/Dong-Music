@@ -1,0 +1,88 @@
+$color-primary:#32627E;
+$color-secondary:#FCAC48;
+$color-one:#E1ECF3;
+$color-two:#C3DAE7;
+$color-three:#CBCBCB;
+$color-disacctive:#EDEDED;
+$color-four:#FDCB8D;
+$color-five:#EF8704;
+
+
+
+
+$font:(xs:12px,
+    sm:16px,
+    md:18px,
+    lg:24px,
+    xl:44px);
+
+
+@mixin header-footer-base() {
+    background-color: $color-primary;
+    border-radius: 24px;
+    padding: 35px 16px;
+}
+
+@mixin search-box($color-border:$color-primary) {
+    height: 56px;
+    border: 1.5px solid $color-border;
+    border-radius: 16px;
+
+}
+
+@mixin input-focus($border-color:$color-four, $color:$color-four) {
+    outline: none;
+    border-color: $border-color;
+    color: $color;
+    background-image: none;
+}
+
+@mixin btn($color-back:$color-secondary, $color-content:"black", $weight:500) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: $color-back;
+    color: $color-content;
+    border: none !important;
+    border-radius: 16px;
+    font-size: map-get($font, sm) !important;
+    font-weight: $weight !important;
+}
+
+
+@mixin menu-item () {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 25%px;
+
+
+
+}
+
+
+
+@font-face {
+    font-family: vazir;
+    src: url(/font/vazir.eot);
+    src: url(/font/vazir.ttf)format(ttf) //
+        url(/font/vazir.woff)format(woff) //
+        url(/font/vazir.woff2)format(woff2);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+
+    font-family: vazir;
+    height: 100vh;
+
+}

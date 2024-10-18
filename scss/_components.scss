@@ -1,0 +1,248 @@
+.header {
+    position: relative;
+
+    top: 0px;
+    justify-content: right;
+    min-height: 189px;
+    @include header-footer-base();
+
+    &-right {
+        color: $color-secondary;
+
+        &-row1 {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                font-size: 2rem;
+
+                font-weight: 600;
+
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+
+        }
+    }
+
+    &-left {
+
+        .input-search {
+            background-image: url(/images/search-normal.svg);
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 98% center;
+            width: 100%;
+            padding: 15px 45px 15px 15px;
+            color: $color-one;
+            @include search-box($color-one);
+
+
+            &::placeholder {
+                color: $color-one;
+            }
+
+            &:focus {
+
+                @include input-focus();
+
+            }
+
+
+        }
+
+        .menu {
+            position: relative;
+            list-style: none;
+            border-bottom: 1.5px solid $color-one;
+            width: 100%;
+            height: 56px;
+            padding-right: 0;
+
+
+            &-home {
+                @include menu-item;
+
+                position: absolute;
+
+                background-image: url(/images/home.svg);
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: 25px;
+
+                &:hover {
+
+                    background-image: url(/images/home-hover.svg);
+                    background-size: 25px;
+                    top: 1.25px;
+                    border-bottom: 4px solid $color-secondary;
+
+
+                }
+
+
+            }
+
+            &-call {
+                @include menu-item;
+                position: absolute;
+                right: 180px;
+                background-image: url(/images/mobile.svg);
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: 25px;
+
+                &:hover {
+                    background-image: url(/images/mobile-2.svg);
+                    background-size: 25px;
+                    top: 1.25px;
+                    border-bottom: 4px solid $color-secondary;
+                }
+
+            }
+
+            li:hover a {
+                color: $color-secondary;
+            }
+
+
+            a {
+                text-decoration: none;
+                color: $color-one;
+                font-size: map-get($font, sm);
+                font-weight: 400;
+                margin-right: 30px;
+                width: 100%;
+            }
+        }
+    }
+
+
+}
+
+
+
+.card {
+    margin-bottom: 1.5rem;
+    border-radius: 16px !important;
+    background-color: $color-one !important;
+
+}
+
+
+
+// -------------
+
+
+
+.btn-filter {
+
+    height: 48px !important;
+    width: 96px !important;
+    margin-left: 8px;
+    @include btn($color-disacctive, gray, 400);
+
+
+    &:hover {
+        background-color: $color-primary;
+        color: white;
+    }
+
+    &:active {
+        background-color: $color-primary;
+        color: white;
+
+    }
+
+}
+
+
+
+.orange-btn {
+
+    width: 157px;
+    height: 56px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    @include btn;
+
+    i {
+        font-size: 30px;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: $color-five;
+        border: 1.5px solid $color-five !important;
+
+        i {
+            color: $color-five;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// -start- audio-control
+
+.audio-wrapper {
+    background-color: inherit;
+
+    border-radius: 10px;
+
+}
+
+audio {
+    width: 100%;
+    background-color: inherit;
+    border-radius: 10px;
+}
+
+::-webkit-media-controls-panel {
+    background-color: $color-two;
+
+    border-radius: 10px;
+}
+
+::-webkit-media-controls-play-button {
+
+
+    background-color: inherit;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+//-end- audio-control //--start-footer
+
+.footer {
+    position: relative;
+    bottom: 0;
+    @include header-footer-base();
+    // min-height: 96px;
+    color: $color-secondary;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 112px;
+    font-size: 20px;
+    padding: 20px 28px;
+
+
+
+
+
+
+
+
+
+}

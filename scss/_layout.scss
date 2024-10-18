@@ -1,0 +1,232 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+
+
+
+    &-right {
+
+        margin-left: 30px;
+
+        .singers-search {
+            margin-bottom: 8px;
+            padding: 0 !important;
+
+            input {
+                @include search-box();
+
+                &::placeholder {
+                    color: black;
+                }
+
+                &:focus {
+
+                    @include input-focus($color-five, black);
+
+                }
+            }
+
+
+        }
+
+        .singers-list {
+            overflow-y: scroll;
+            height: 434px;
+            border-radius: 16px;
+            background: $color-one;
+
+
+            li {
+                list-style: none;
+                height: 48px;
+                line-height: 48px;
+
+
+            }
+
+            a {
+                text-decoration: none;
+                color: #000000;
+                font-size: map-get($font, sm);
+                margin-right: 12px;
+
+            }
+        }
+
+    }
+
+    &-left {
+
+
+
+
+        .cards {
+
+            margin-top: 12px;
+
+            .card {
+
+                &-header {
+                    display: flex;
+                    align-items: flex-start;
+                    height: 70px !important;
+                    margin: 16px 8px !important;
+                    background-color: inherit !important;
+                    border-bottom: 1.5px solid $color-three !important;
+
+                    .song-icon {
+                        margin-left: 12px;
+                    }
+
+                    .song-name {
+                        font-size: map-get($font, sm);
+                        font-weight: 700;
+                    }
+
+
+
+                }
+
+                .card-body {
+
+
+
+                    .details {
+
+                        display: flex;
+                        align-items: center;
+                        height: 22px;
+                        margin-top: 8px;
+
+
+                        img {
+                            margin-left: 4px;
+
+                            border-radius: 8px;
+                        }
+
+                        p {
+                            text-align: center;
+                            margin-left: 8px;
+                            font-size: map-get($font, xs);
+                            color: #000000;
+                            margin-bottom: 0;
+                        }
+
+
+                    }
+
+                }
+
+
+
+
+
+
+
+
+            }
+
+
+
+        }
+
+        .page-counter {
+
+            ul {
+                list-style-type: none;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 56px;
+                height: 56px;
+                background-color: $color-primary;
+                cursor: pointer;
+                border-radius: 16px;
+                font-size: map-get($font, sm);
+                font-weight: 500;
+                text-align: center;
+                line-height: 25px;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1.5px solid $color-primary;
+                }
+
+                &:hover a {
+                    color: $color-primary;
+
+                }
+
+                &:hover i {
+                    color: $color-primary;
+                }
+
+                i {
+
+                    color: white;
+                }
+
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+    }
+
+
+    // ----start list scroll styles---
+    ::-webkit-scrollbar {
+        width: 16px;
+
+        /* width of the scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $color-one;
+        border-radius: 24px;
+
+        /* color of the track */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $color-primary;
+        border-radius: 24px;
+        /* color of the scrollbar handle */
+    }
+
+    /* For Firefox */
+    ::-moz-scrollbar {
+        width: 10px;
+    }
+
+    ::-moz-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-moz-scrollbar-thumb {
+        background: #888;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
